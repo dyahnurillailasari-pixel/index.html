@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Properti Indah – Rumah, Apartemen, dan Villa</title>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f4f9ff;
+        color: #333;
+        margin: 0;
+    }
+
+    header {
+        background: linear-gradient(90deg, #0a74da, #1b9ce2, #5cc1f2);
+        color: white;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 { margin: 0; }
+    header nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    header nav a:hover { text-decoration: underline; }
+
+    section { display: none; } /* default semua section disembunyikan */
+    section.active { display: block; }
+
+    .hero {
+        text-align: center;
+        background: linear-gradient(to right, #e0f4ff, #ffffff);
+        padding: 60px 20px;
+        border-radius: 0 0 40px 40px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .hero h2 {
+        color: #0a74da;
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        line-height: 1.6;
+    }
+
+    /* ==== KOLEKSI GAMBAR ==== */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 40px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+        padding: 0 20px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.2s;
+    }
+    .card:hover { transform: scale(1.02); }
+
+    .card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-content h3 {
+        color: #0a74da;
+        margin-top: 0;
+    }
+
+    .card-content p {
+        margin: 5px 0;
+    }
+
+    .btn-detail {
+        display: inline-block;
+        margin-top: 10px;
+        background: #0a74da;
+        color: white;
+        padding: 8px 18px;
+        border-radius: 20px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    footer {
+        background: #084b83;
+        color: #e0f7ff;
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+    }
+
+    /* ==== KONTAK ==== */
+    .contact {
+        max-width: 700px;
+        margin: 40px auto;
+        background: linear-gradient(90deg, #1b9ce2, #0a74da);
+        color: white;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .contact input, .contact textarea {
+        width: 90%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .contact button {
+        background: white;
+        color: #0a74da;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Properti Indah</h1>
+    <nav>
+        <a onclick="showSection('beranda')">Beranda</a>
+        <a onclick="showSection('tentang')">Tentang</a>
+        <a onclick="showSection('kontak')">Kontak</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- ======== BERANDA ======== -->
+    <section id="beranda" class="active">
+        <div class="hero">
+            <h2>Selamat Datang di Properti Indah 🏡</h2>
+            <p>
+                Kami adalah agen properti terpercaya yang membantu Anda menemukan hunian impian, 
+                mulai dari rumah minimalis, apartemen modern, hingga villa mewah di seluruh Indonesia.
+            </p>
+
+            <div class="gallery">
+                <img src="d:\UTS 2025\1.jpg" alt="Properti 1">
+                <img src="d:\UTS 2025\2.jpg" alt="Properti 2">
+                <img src="d:\UTS 2025\3.jpg" alt="Properti 3">
+                <img src="d:\UTS 2025\4.jpg" alt="Properti 4">
+                <img src="d:\UTS 2025\5.jpg" alt="Properti 5">
+                <img src="d:\UTS 2025\6.jpg" alt="Properti 6">
+                <img src="d:\UTS 2025\7.jpg" alt="Properti 7">
+                <img src="d:\UTS 2025\8.jpg" alt="Properti 8">
+                <img src="d:\UTS 2025\9.jpeg" alt="Properti 9">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <img src="d:\UTS 2025\rumah minimalis.webp" alt="Rumah Minimalis di Semarang">
+                <div class="card-content">
+                    <h3>Rumah Minimalis di Semarang</h3>
+                    <p><strong>Rp 850.000.000</strong></p>
+                    <p>3 Tidur | 2 Mandi | 120 m²</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="d:\UTS 2025\Apartemen.jpg" alt="Apartemen Mewah di Jakarta">
+                <div class="card-content">
+                    <h3>Apartemen Mewah di Jakarta</h3>
+                    <p><strong>Rp 1.200.000.000</strong></p>
+                    <p>2 Tidur | 1 Mandi | 90 m²</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="d:\UTS 2025\Villa.jpg" alt="Villa Nyaman di Bali">
+                <div class="card-content">
+                    <h3>Villa Nyaman di Bali</h3>
+                    <p><strong>Rp 2.500.000.000</strong></p>
+                    <p>4 Tidur | 3 Mandi | 200 m²</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== TENTANG ======== -->
+    <section id="tentang">
+        <div class="hero">
+            <h2>Tentang Properti Indah</h2>
+            <p>
+                Properti Indah berdiri dengan tujuan untuk membantu masyarakat Indonesia menemukan hunian impian mereka.
+                Kami menawarkan berbagai pilihan seperti rumah, apartemen, dan villa di berbagai kota besar.
+                Tim profesional kami selalu siap memberikan pelayanan terbaik dan informasi terpercaya.
+            </p>
+        </div>
+    </section>
+
+    <!-- ======== KONTAK ======== -->
+    <section id="kontak">
+        <div class="contact">
+            <h2>Hubungi Kami 📞</h2>
+            <p>Isi formulir di bawah untuk pertanyaan, konsultasi, atau kerja sama.</p>
+            <input type="text" placeholder="Nama Anda">
+            <input type="email" placeholder="Email Anda">
+            <textarea rows="5" placeholder="Pesan Anda..."></textarea><br>
+            <button>Kirim Pesan</button>
+        </div>
+    </section>
+
+</main>
+
+<footer>© 2025 L's Property | Semua Hak Dilindungi</footer>
+
+<script>
+function showSection(id) {
+    document.querySelectorAll("main section").forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</body>
+</html>
